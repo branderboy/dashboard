@@ -332,20 +332,158 @@
         }
 
         .narrative-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .narrative-content p {
+        .narrative-top-text {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .narrative-top-text p {
             font-size: 22px;
             line-height: 1.9;
             color: #a0aec0;
+        }
+
+        .narrative-top-text p strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* Location pins row */
+        .location-pins {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .location-pin {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 100px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .location-pin:hover {
+            border-color: rgba(104,211,145,0.3);
+            background: rgba(104,211,145,0.05);
+        }
+
+        .location-pin svg {
+            flex-shrink: 0;
+        }
+
+        .location-pin span {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e2e8f0;
+            letter-spacing: 0.02em;
+        }
+
+        /* Disconnected systems visual */
+        .systems-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .system-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 28px 24px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            min-width: 150px;
+            transition: all 0.3s ease;
+        }
+
+        .system-node:hover {
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+
+        .system-node-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .system-node-icon.sn-clover { background: rgba(104,211,145,0.12); }
+        .system-node-icon.sn-acuity { background: rgba(99,179,237,0.12); }
+        .system-node-icon.sn-rewards { background: rgba(183,148,244,0.12); }
+
+        .system-node-icon svg { width: 24px; height: 24px; }
+
+        .system-node-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .system-node-sub {
+            font-size: 12px;
+            color: #718096;
+        }
+
+        .system-break {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: #fc8181;
+        }
+
+        .system-break-line {
+            width: 40px;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, #fc8181 0, #fc8181 6px, transparent 6px, transparent 12px);
+        }
+
+        .system-break svg { width: 16px; height: 16px; }
+
+        /* Bottom text */
+        .narrative-bottom-text {
             text-align: center;
         }
 
-        .narrative-content p strong {
+        .narrative-bottom-text p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #a0aec0;
+        }
+
+        .narrative-bottom-text strong {
             color: #ffffff;
             font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .systems-visual { gap: 16px; }
+            .system-node { min-width: 120px; padding: 20px 16px; }
+            .system-break-line { width: 24px; }
+            .location-pins { gap: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .systems-visual { flex-direction: column; }
+            .system-break { transform: rotate(90deg); }
         }
 
         /* ========== PILLAR SECTIONS ========== */
@@ -1205,7 +1343,8 @@
 
             .story-quote { padding: 32px 28px; }
 
-            .narrative-content p { font-size: 19px; }
+            .narrative-top-text p,
+            .narrative-bottom-text p { font-size: 19px; }
 
             .cta-pillars {
                 flex-direction: column;
@@ -1292,8 +1431,76 @@
     <!-- ========== THE STORY ========== -->
     <section class="narrative section-pad" id="story">
         <div class="container">
-            <div class="narrative-content fade-up">
-                <p>Capitol Heights. Clinton. Bowie. Upper Marlboro. DC. Five locations across the DMV. Every transaction hits your <strong>Clover POS</strong>. Every appointment flows through <strong>Acuity</strong>. Every repeat visit is tracked in your <strong>Rewards App</strong>. But here's the truth: those three systems don't talk to each other. You're making decisions with one-third of the picture at a time. <strong>That worked to get you here. It won't get you to what's next.</strong></p>
+            <div class="narrative-content">
+
+                <!-- Location pills -->
+                <div class="location-pins fade-up">
+                    <div class="location-pin">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Capitol Heights</span>
+                    </div>
+                    <div class="location-pin">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Clinton</span>
+                    </div>
+                    <div class="location-pin">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Bowie</span>
+                    </div>
+                    <div class="location-pin">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Upper Marlboro</span>
+                    </div>
+                    <div class="location-pin">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>DC</span>
+                    </div>
+                </div>
+
+                <!-- Disconnected systems graphic -->
+                <div class="systems-visual fade-up">
+                    <div class="system-node">
+                        <div class="system-node-icon sn-clover">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <span class="system-node-label">Clover POS</span>
+                        <span class="system-node-sub">Transactions</span>
+                    </div>
+
+                    <div class="system-break">
+                        <div class="system-break-line"></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        <div class="system-break-line"></div>
+                    </div>
+
+                    <div class="system-node">
+                        <div class="system-node-icon sn-acuity">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <span class="system-node-label">Acuity</span>
+                        <span class="system-node-sub">Appointments</span>
+                    </div>
+
+                    <div class="system-break">
+                        <div class="system-break-line"></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        <div class="system-break-line"></div>
+                    </div>
+
+                    <div class="system-node">
+                        <div class="system-node-icon sn-rewards">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#b794f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <span class="system-node-label">Rewards App</span>
+                        <span class="system-node-sub">Loyalty</span>
+                    </div>
+                </div>
+
+                <!-- Bottom message -->
+                <div class="narrative-bottom-text fade-up">
+                    <p>Three systems. Five locations. None of them talk to each other.<br>You're making decisions with one-third of the picture at a time.<br><strong>That worked to get you here. It won't get you to what's next.</strong></p>
+                </div>
+
             </div>
         </div>
     </section>
