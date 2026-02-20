@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaggleFish for Pro Wash — Your Business Intelligence Dashboard</title>
+    <title>TaggleFish for Pro Wash | Your Business Intelligence Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -472,6 +472,21 @@
         .icon-gold { background: rgba(214, 158, 46, 0.15); color: #f6c85b; }
         .icon-purple { background: rgba(128, 90, 213, 0.15); color: #b794f4; }
 
+        .icon-purple-bold {
+            background: linear-gradient(135deg, rgba(128, 90, 213, 0.25), rgba(183, 148, 244, 0.15));
+            color: #b794f4;
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            border: 1px solid rgba(183, 148, 244, 0.2);
+            box-shadow: 0 8px 32px rgba(128, 90, 213, 0.15);
+        }
+
+        .icon-purple-bold svg {
+            width: 36px;
+            height: 36px;
+        }
+
         .feature-icon svg {
             width: 28px;
             height: 28px;
@@ -552,6 +567,199 @@
         .quote-gold .quote-label { color: #f6c85b; }
         .quote-purple { border-color: #b794f4; }
         .quote-purple .quote-label { color: #b794f4; }
+
+        /* ========== DATA INFRASTRUCTURE ========== */
+        .data-infra {
+            position: relative;
+            background: #0d1224;
+        }
+
+        .data-infra::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+        }
+
+        .data-infra-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 56px;
+        }
+
+        .data-infra-header p {
+            margin-top: 16px;
+        }
+
+        .data-infra-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .data-source-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 44px 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .data-source-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #38a169, #68d391);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .data-source-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(104, 211, 145, 0.2);
+            box-shadow: 0 20px 60px rgba(56, 161, 105, 0.1);
+        }
+
+        .data-source-card:hover::before { opacity: 1; }
+
+        .data-source-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+            font-weight: 900;
+        }
+
+        .data-source-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .ds-clover {
+            background: linear-gradient(135deg, rgba(56, 161, 105, 0.2), rgba(104, 211, 145, 0.1));
+            color: #68d391;
+            border: 1px solid rgba(104, 211, 145, 0.2);
+            box-shadow: 0 8px 32px rgba(56, 161, 105, 0.15);
+        }
+
+        .ds-acuity {
+            background: linear-gradient(135deg, rgba(49, 130, 206, 0.2), rgba(99, 179, 237, 0.1));
+            color: #63b3ed;
+            border: 1px solid rgba(99, 179, 237, 0.2);
+            box-shadow: 0 8px 32px rgba(49, 130, 206, 0.15);
+        }
+
+        .ds-rewards {
+            background: linear-gradient(135deg, rgba(214, 158, 46, 0.2), rgba(246, 200, 91, 0.1));
+            color: #f6c85b;
+            border: 1px solid rgba(246, 200, 91, 0.2);
+            box-shadow: 0 8px 32px rgba(214, 158, 46, 0.15);
+        }
+
+        .data-source-card h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .data-source-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+
+        .tag-clover { color: #68d391; background: rgba(104, 211, 145, 0.1); }
+        .tag-acuity { color: #63b3ed; background: rgba(99, 179, 237, 0.1); }
+        .tag-rewards { color: #f6c85b; background: rgba(246, 200, 91, 0.1); }
+
+        .data-source-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #718096;
+        }
+
+        .data-source-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .data-source-list li {
+            font-size: 15px;
+            color: #a0aec0;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .data-source-list li svg {
+            flex-shrink: 0;
+        }
+
+        .data-infra-connector {
+            text-align: center;
+            margin-top: 48px;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+        }
+
+        .data-infra-connector p {
+            font-size: 18px;
+            color: #a0aec0;
+        }
+
+        .data-infra-connector strong {
+            color: #ffffff;
+        }
+
+        .connector-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #718096;
+        }
+
+        .connector-arrow svg {
+            color: #68d391;
+        }
+
+        @media (max-width: 768px) {
+            .data-infra-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .data-source-card { padding: 36px 24px; }
+        }
 
         /* ========== BEFORE/AFTER ========== */
         .before-after {
@@ -741,6 +949,137 @@
             border-radius: 50%;
         }
 
+        /* ========== LOCATIONS ========== */
+        .locations-section {
+            background: #0d1224;
+            position: relative;
+        }
+
+        .locations-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .location-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #38a169, #68d391);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .location-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(104, 211, 145, 0.2);
+            box-shadow: 0 16px 48px rgba(56, 161, 105, 0.1);
+        }
+
+        .location-card:hover::before { opacity: 1; }
+
+        .location-card-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, rgba(56, 161, 105, 0.2), rgba(104, 211, 145, 0.1));
+            border: 1px solid rgba(104, 211, 145, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 800;
+            color: #68d391;
+            margin: 0 auto 16px;
+        }
+
+        .location-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .location-card-address {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #718096;
+        }
+
+        .location-card-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #68d391;
+            text-decoration: none;
+        }
+
+        .location-card-phone:hover { color: #9ae6b4; }
+
+        .locations-summary {
+            text-align: center;
+            margin-top: 40px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+        }
+
+        .locations-summary p {
+            font-size: 16px;
+            color: #a0aec0;
+        }
+
+        .locations-summary strong { color: #ffffff; }
+
+        @media (max-width: 1024px) {
+            .locations-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .locations-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-card { padding: 24px 20px; }
+        }
+
         /* ========== FOOTER ========== */
         .footer {
             background: #0a0e1a;
@@ -926,20 +1265,24 @@
                     Built Exclusively for Pro Wash
                 </div>
                 <h1>Lamond, You Built a 5-Location Empire.<br><span class="highlight-green">Now It's Time to Run It Like One.</span></h1>
-                <p class="subhead">You didn't grow Pro Wash by guessing. But right now, your data is scattered across Clover, Acuity, and your own gut. TaggleFish brings it all together &mdash; so every decision you make is backed by the numbers.</p>
+                <p class="subhead">You didn't grow Pro Wash by guessing. But right now, your Clover POS data, your Acuity bookings, and your Rewards App insights are all trapped in separate systems. TaggleFish connects all three so every decision you make is backed by the full picture.</p>
                 <a href="#book-call" class="btn btn-primary btn-large btn-pulse">See What We Built for Pro Wash</a>
                 <div class="hero-trust">
                     <div class="hero-trust-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Clover POS Integration
+                        Clover POS Connected
                     </div>
                     <div class="hero-trust-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        Acuity Scheduling Sync
+                        Acuity Scheduling Connected
                     </div>
                     <div class="hero-trust-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        5 DMV Locations
+                        Rewards App Connected
+                    </div>
+                    <div class="hero-trust-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Capitol Heights &bull; Clinton &bull; Bowie &bull; Upper Marlboro &bull; DC
                     </div>
                 </div>
             </div>
@@ -950,7 +1293,80 @@
     <section class="narrative section-pad" id="story">
         <div class="container">
             <div class="narrative-content fade-up">
-                <p>You've got 5 locations humming across the DMV. Customers rolling in. Staff on the ground. Revenue flowing through Clover every single day. <strong>But here's the truth:</strong> you're running a multi-location operation with single-location visibility. You check one system for sales, another for bookings, and your gut for everything else. <strong>That worked to get you here. It won't get you to what's next.</strong></p>
+                <p>Capitol Heights. Clinton. Bowie. Upper Marlboro. DC. Five locations humming across the DMV. Every transaction hits your <strong>Clover POS</strong>. Every appointment flows through <strong>Acuity</strong>. Every repeat visit is tracked in your <strong>Rewards App</strong>. But here's the truth: those three systems don't talk to each other. You're making decisions with one-third of the picture at a time. <strong>That worked to get you here. It won't get you to what's next.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- YOUR DATA INFRASTRUCTURE -->
+    <!-- ================================================================ -->
+    <section class="data-infra section-pad" id="your-data">
+        <div class="container">
+            <div class="data-infra-header fade-up">
+                <span class="section-label label-green">Your Data Infrastructure</span>
+                <h2>You Already Have the Data. It's Just Trapped in Three Separate Systems.</h2>
+                <p class="subhead">Lamond, your Clover POS, Acuity Scheduling, and Rewards App are each collecting powerful data every single day across Capitol Heights, Clinton, Bowie, Upper Marlboro, and DC. The problem isn't your data. The problem is they don't talk to each other. Until now.</p>
+            </div>
+
+            <div class="data-infra-grid">
+                <div class="data-source-card fade-up">
+                    <div class="data-source-icon ds-clover">
+                        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <span class="data-source-tag tag-clover">Connected</span>
+                    <h3>Clover POS</h3>
+                    <p>Every transaction across Capitol Heights, Clinton, Bowie, Upper Marlboro, and DC flows through Clover. Your dashboard pulls this data automatically.</p>
+                    <ul class="data-source-list">
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Daily revenue per location</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Transaction volume and averages</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Service breakdowns and top sellers</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Peak hours and traffic patterns</li>
+                    </ul>
+                </div>
+
+                <div class="data-source-card fade-up fade-up-delay-1">
+                    <div class="data-source-icon ds-acuity">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
+                    </div>
+                    <span class="data-source-tag tag-acuity">Connected</span>
+                    <h3>Acuity Scheduling</h3>
+                    <p>Every booking, cancellation, and no-show across all 5 Pro Wash locations lives in Acuity. We pull it all in and match it to your Clover revenue.</p>
+                    <ul class="data-source-list">
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Bookings vs. walk-in ratios</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No-show and cancellation rates</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Revenue lost to missed appointments</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Booking trends by location and day</li>
+                    </ul>
+                </div>
+
+                <div class="data-source-card fade-up fade-up-delay-2">
+                    <div class="data-source-icon ds-rewards">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span class="data-source-tag tag-rewards">Connected</span>
+                    <h3>Rewards App</h3>
+                    <p>Your loyalty program drives repeat visits across every Pro Wash location. That retention data is gold, and right now it's sitting untapped in a separate system.</p>
+                    <ul class="data-source-list">
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f6c85b" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Loyalty redemption rates by location</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f6c85b" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Repeat customer frequency and patterns</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f6c85b" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> At-risk customers who stopped coming</li>
+                        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f6c85b" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Push notification engagement rates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="data-infra-connector fade-up">
+                <div class="connector-arrow">
+                    <span>Clover POS</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    <span>Acuity</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    <span>Rewards App</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    <span style="color: #68d391; font-weight: 700;">Your Dashboard</span>
+                </div>
+                <p>TaggleFish connects all three systems into <strong>one unified intelligence layer</strong>. No manual exports. No spreadsheets. Your Clover transactions from Capitol Heights to DC, your Acuity bookings, and your Rewards App loyalty data merge automatically so you see the full picture for the first time.</p>
             </div>
         </div>
     </section>
@@ -964,29 +1380,29 @@
                 <span class="pillar-number pillar-number-green">01</span>
                 <span class="section-label label-green">Make More Money</span>
                 <h2>Stop Leaving Revenue on the Table You Can't Even See</h2>
-                <p class="subhead">Your 5 locations generate thousands of transactions every month. But right now, you don't know which location is underperforming, which services are carrying revenue, or how much no-shows are actually costing you. The dashboard changes that.</p>
+                <p class="subhead">Your Clover POS processes thousands of transactions every month. Your Acuity books detailing appointments daily. Your Rewards App tracks who comes back. But none of that data is working together to show you what's actually happening. The dashboard changes that.</p>
             </div>
 
             <div class="feature-grid fade-up">
                 <div class="feature-card card-green">
                     <div class="feature-icon icon-green"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
                     <h3>Revenue by Location</h3>
-                    <p>See which of your 5 locations is leading and which one quietly dropped 15% last month. Updated daily from Clover &mdash; no spreadsheets needed.</p>
+                    <p>Pulled straight from your Clover POS. See if Capitol Heights is leading, if Clinton quietly dropped 15% last month, how Bowie compares to Upper Marlboro. Updated daily. No spreadsheets.</p>
                 </div>
                 <div class="feature-card card-green">
                     <div class="feature-icon icon-green"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
                     <h3>No-Show Cost Tracker</h3>
-                    <p>Every missed Acuity appointment has a dollar value. Your dashboard calculates exactly how much no-shows and cancellations cost Pro Wash every single month.</p>
+                    <p>Pulled from your Acuity Scheduling data. Every missed appointment has a dollar value. Your dashboard calculates exactly how much no-shows and cancellations cost Pro Wash every single month.</p>
                 </div>
                 <div class="feature-card card-green">
                     <div class="feature-icon icon-green"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
                     <h3>Untapped Zip Codes</h3>
-                    <p>See exactly which DMV zip codes you're not reaching yet. Your next 500 customers are already in a radius around your locations &mdash; we show you where.</p>
+                    <p>Using your Clover transaction data and Rewards App customer records, we map exactly which DMV zip codes you're not reaching yet. Your next 500 customers are already nearby.</p>
                 </div>
             </div>
 
             <div class="story-quote quote-green fade-up">
-                <p>"What if you found out that one location has been losing $3,200/month to no-shows &mdash; and a simple text reminder could cut that in half? That's the kind of money your dashboard puts back in your pocket."</p>
+                <p>"What if you found out that Clinton has been losing $3,200/month to Acuity no-shows and your DC location's loyalty redemption rate is half of Bowie's? That's the kind of money your dashboard puts back in your pocket."</p>
                 <span class="quote-label">What your data will reveal</span>
             </div>
         </div>
@@ -1001,7 +1417,7 @@
                 <span class="pillar-number pillar-number-blue">02</span>
                 <span class="section-label label-blue">Make Life Easier</span>
                 <h2>One Screen. Five Locations. Zero Guesswork.</h2>
-                <p class="subhead">Right now you're logging into Clover, opening Acuity, texting managers, and checking reports from three different systems. Your dashboard puts everything on one screen &mdash; so you can run your business from your phone, your couch, or your car.</p>
+                <p class="subhead">Right now you're logging into Clover for sales, switching to Acuity for bookings, checking the Rewards App for loyalty data, and texting managers for everything else. Your dashboard merges all three systems into one screen so you can run your business from your phone, your couch, or your car.</p>
             </div>
 
             <div class="before-after fade-up">
@@ -1012,7 +1428,7 @@
                     </h3>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-                        <span>Log into Clover separately for each location to check numbers</span>
+                        <span>Log into Clover POS separately for each of 5 locations</span>
                     </div>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
@@ -1020,11 +1436,11 @@
                     </div>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-                        <span>Text managers to get a feel for what's happening on the ground</span>
+                        <span>Open the Rewards App to check loyalty and repeat visits</span>
                     </div>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-                        <span>End of month: still not sure which location actually performed</span>
+                        <span>Text managers because none of these systems connect</span>
                     </div>
                 </div>
                 <div class="after-col">
@@ -1034,7 +1450,7 @@
                     </h3>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                        <span>Open one screen &mdash; all 5 locations, all revenue, all bookings</span>
+                        <span>Clover + Acuity + Rewards App on one screen, all 5 locations</span>
                     </div>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
@@ -1042,17 +1458,17 @@
                     </div>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                        <span>Bookings vs. walk-ins, peak hours, and staffing &mdash; all automatic</span>
+                        <span>Bookings vs. walk-ins, peak hours, and staffing. All automatic</span>
                     </div>
                     <div class="ba-item">
                         <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-                        <span>Check it from your phone at dinner &mdash; 30 seconds and you're done</span>
+                        <span>Check it from your phone at dinner. 30 seconds and you're done</span>
                     </div>
                 </div>
             </div>
 
             <div class="story-quote quote-blue fade-up">
-                <p>"You didn't build Pro Wash to spend your nights buried in reports. The dashboard gives you back your time &mdash; so you can spend it growing the business, not chasing data."</p>
+                <p>"You didn't build Pro Wash to spend your nights bouncing between Clover reports, Acuity calendars, and Rewards App data. The dashboard gives you back your time so you can spend it growing from 5 locations to whatever's next."</p>
                 <span class="quote-label">Your new daily reality</span>
             </div>
         </div>
@@ -1067,34 +1483,34 @@
                 <span class="pillar-number pillar-number-gold">03</span>
                 <span class="section-label label-gold">Make You Smarter</span>
                 <h2>Decisions Backed by Data, Not Gut Feelings</h2>
-                <p class="subhead">You've made great decisions to get here. But at 5 locations, instinct alone starts to miss things. The dashboard turns your Clover and Acuity data into intelligence you can act on &mdash; before problems become expensive.</p>
+                <p class="subhead">You've made great decisions to get here. But at 5 locations, instinct alone starts to miss things. The dashboard takes your Clover sales, Acuity bookings, and Rewards App retention data and turns it into intelligence you can act on before problems become expensive.</p>
             </div>
 
             <div class="feature-grid fade-up">
                 <div class="feature-card card-gold">
                     <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
                     <h3>90-Day Revenue Forecast</h3>
-                    <p>See where Pro Wash revenue is headed based on real trends across all 5 locations &mdash; not a guess, a projection built from your actual data.</p>
+                    <p>Built from your Clover POS trends across all 5 locations. Not a guess, a projection built from your actual transaction history and seasonal patterns.</p>
                 </div>
                 <div class="feature-card card-gold">
                     <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div>
                     <h3>Bookings vs. Walk-In Ratio</h3>
-                    <p>Know exactly how much revenue comes from scheduled Acuity appointments vs. drive-ups. See which locations rely too heavily on walk-ins so you can fix it.</p>
+                    <p>Cross-referencing your Acuity bookings with Clover transactions at each location. Does Upper Marlboro rely too heavily on walk-ins? Is DC under-booked through Acuity? Now you'll know.</p>
                 </div>
                 <div class="feature-card card-gold">
                     <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                     <h3>Peak Hour Intelligence</h3>
-                    <p>Discover your busiest windows at every location. DMV traffic and weather patterns hit differently &mdash; your dashboard shows the real patterns, not assumptions.</p>
+                    <p>Discover that Capitol Heights peaks at 10am while DC runs hot at 2pm. Bowie's Saturday rush looks nothing like Clinton's. Your Clover data reveals the real patterns at each location.</p>
                 </div>
                 <div class="feature-card card-gold">
                     <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
                     <h3>Campaign Day Calendar</h3>
-                    <p>Get told exactly when to run promotions &mdash; before every major holiday, seasonal shift, and slow period hitting the DMV market. Timed to your data.</p>
+                    <p>Get told exactly when to run promotions before every major holiday, seasonal shift, and slow period hitting the DMV market. Timed to your data.</p>
                 </div>
                 <div class="feature-card card-gold">
                     <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
                     <h3>Customer Retention Signals</h3>
-                    <p>See who's coming back, who stopped, and who's at risk of leaving &mdash; with specific numbers for each Pro Wash location. Catch churn before it happens.</p>
+                    <p>Powered by your stamp card data. See who's a loyal regular, who stopped coming, and which location, Capitol Heights, Clinton, Bowie, Upper Marlboro, or DC, retains customers best.</p>
                 </div>
                 <div class="feature-card card-gold">
                     <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
@@ -1104,7 +1520,7 @@
             </div>
 
             <div class="story-quote quote-gold fade-up">
-                <p>"Imagine walking into a meeting knowing exactly which location is up 22% this month, why your College Park bookings dropped on Tuesdays, and that Bowie is your highest-value zip code for detailing. That's not a fantasy &mdash; that's your Tuesday morning with the dashboard."</p>
+                <p>"Imagine knowing exactly that Capitol Heights is up 22% this month, why your Clinton Acuity bookings dropped on Tuesdays, that Upper Marlboro has your best loyalty redemption rate, and that Bowie 20716 is your highest-value zip code for detailing. That's your Tuesday morning with the dashboard."</p>
                 <span class="quote-label">The intelligence advantage</span>
             </div>
         </div>
@@ -1118,35 +1534,35 @@
             <div class="pillar-header fade-up">
                 <span class="pillar-number pillar-number-purple">04</span>
                 <span class="section-label label-purple">Empower Your Staff</span>
-                <h2>Give Your Managers the Tools to Run Their Location Like Owners</h2>
-                <p class="subhead">You can't be at 5 locations at once. But right now, your managers are flying blind. They don't know if they're ahead or behind, when to staff up, or how their location compares. The dashboard gives them visibility &mdash; so they make better decisions without calling you first.</p>
+                <h2>Give Your Team the Tools to Run Their Location Like You Would</h2>
+                <p class="subhead">Lamond, you can't be in Capitol Heights and DC at the same time. But right now your team at Clinton, Bowie, and Upper Marlboro is flying blind. They don't know if they're ahead or behind, when to staff up, or how their location stacks up. The dashboard gives every manager visibility so they make better decisions without calling you first.</p>
             </div>
 
             <div class="feature-grid feature-grid-2 fade-up">
                 <div class="feature-card card-purple">
-                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <div class="feature-icon icon-purple-bold"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h8"/></svg></div>
                     <h3>Staffing Intelligence</h3>
-                    <p>Your managers see exactly which days need all hands on deck and which days they can run lean. Data-driven scheduling instead of guesswork &mdash; across all 5 locations.</p>
+                    <p>Your Clover traffic and Acuity booking data show exactly which days Capitol Heights needs all hands on deck and which days Bowie can run lean. Data-driven scheduling replaces guesswork at every Pro Wash site.</p>
                 </div>
                 <div class="feature-card card-purple">
-                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+                    <div class="feature-icon icon-purple-bold"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M8 11l4 4 4-4"/><line x1="3" y1="12" x2="3" y2="12"/></svg></div>
                     <h3>Daily Performance View</h3>
-                    <p>Each manager sees their location's daily revenue, booking count, walk-in traffic, and how they stack up. Healthy competition drives results without you having to push.</p>
+                    <p>Clover revenue, Acuity bookings, and walk-in traffic merged into one view per location. Your team sees how they stack up. Healthy competition drives results without you having to push.</p>
                 </div>
                 <div class="feature-card card-purple">
-                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+                    <div class="feature-icon icon-purple-bold"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8l-4 4-4-4"/><path d="M8 16l4-4 4 4"/><circle cx="12" cy="12" r="3"/></svg></div>
                     <h3>Referral Tracking</h3>
-                    <p>Staff can see which customers are sending new business to their location. They know who to thank, who to reward, and who's building your reputation for you.</p>
+                    <p>Pulled from your Rewards App. Your Bowie team sees which loyalty members are sending new business, your DC crew knows who to thank, and Upper Marlboro knows who's building their reputation.</p>
                 </div>
                 <div class="feature-card card-purple">
-                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-                    <h3>Goal & Accountability Signals</h3>
-                    <p>Set revenue targets per location and let your managers track their own progress in real time. When they own the number, they own the result.</p>
+                    <div class="feature-icon icon-purple-bold"><svg viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/><circle cx="12" cy="7" r="3"/><circle cx="18" cy="3" r="1"/><path d="M6 13l3 3-3 3"/></svg></div>
+                    <h3>Goal &amp; Accountability Signals</h3>
+                    <p>Set revenue targets per location and let your team track their own progress in real time. When they own the number, they own the result. You just watch the scoreboard.</p>
                 </div>
             </div>
 
             <div class="story-quote quote-purple fade-up">
-                <p>"Your best managers want to win &mdash; they just can't see the scoreboard. Give them visibility and watch what happens. When your team sees the numbers, they stop waiting for direction and start driving results on their own."</p>
+                <p>"Lamond, your managers in Capitol Heights, Clinton, Bowie, Upper Marlboro, and DC all want to win. They just can't see the scoreboard right now. Give them their Clover numbers, their Acuity bookings, and their Rewards App data, and watch what happens."</p>
                 <span class="quote-label">The leadership multiplier</span>
             </div>
         </div>
@@ -1163,18 +1579,85 @@
                 <div class="step fade-up">
                     <div class="step-number">1</div>
                     <h3>Connect Your Data</h3>
-                    <p>We connect to your existing Clover POS and Acuity accounts. You don't touch a thing &mdash; it takes less than 10 minutes.</p>
+                    <p>We connect to your Clover POS, Acuity Scheduling, and Rewards App. You don't touch a thing. It takes less than 10 minutes.</p>
                 </div>
                 <div class="step fade-up fade-up-delay-1">
                     <div class="step-number">2</div>
                     <h3>We Build Your Dashboard</h3>
-                    <p>TaggleFish builds your custom Pro Wash intelligence dashboard &mdash; designed around how your 5 locations actually operate.</p>
+                    <p>TaggleFish builds your custom Pro Wash intelligence dashboard, designed around how Capitol Heights, Clinton, Bowie, Upper Marlboro, and DC actually operate.</p>
                 </div>
                 <div class="step fade-up fade-up-delay-2">
                     <div class="step-number">3</div>
                     <h3>See Everything, Everywhere</h3>
-                    <p>Log in from any device and see every location, every metric, every insight &mdash; updated automatically every single day.</p>
+                    <p>Log in from any device and see every location, every metric, every insight, updated automatically every single day.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOCATIONS ========== -->
+    <section class="locations-section section-pad" id="locations">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-label label-green">Your 5 Locations</span>
+                <h2>Every Pro Wash Location. One Dashboard.</h2>
+                <p class="subhead">Clover POS, Acuity Scheduling, and Rewards App data from all 5 locations, unified into a single view.</p>
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card fade-up">
+                    <div class="location-card-number">1</div>
+                    <h3>Capitol Heights</h3>
+                    <p class="location-card-address">29 Hampton Park Blvd<br>Capitol Heights, MD 20743</p>
+                    <a href="tel:3013071414" class="location-card-phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        (301) 307-1414
+                    </a>
+                </div>
+
+                <div class="location-card fade-up fade-up-delay-1">
+                    <div class="location-card-number">2</div>
+                    <h3>Clinton</h3>
+                    <p class="location-card-address">6311 Coventry Way<br>Clinton, MD 20735</p>
+                    <a href="tel:3013071414" class="location-card-phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        (301) 307-1414
+                    </a>
+                </div>
+
+                <div class="location-card fade-up fade-up-delay-2">
+                    <div class="location-card-number">3</div>
+                    <h3>Bowie</h3>
+                    <p class="location-card-address">4406 Crain Highway<br>Bowie, MD 20716</p>
+                    <a href="tel:3013071414" class="location-card-phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        (301) 307-1414
+                    </a>
+                </div>
+
+                <div class="location-card fade-up fade-up-delay-3">
+                    <div class="location-card-number">4</div>
+                    <h3>Upper Marlboro</h3>
+                    <p class="location-card-address">7538 Crain Highway<br>Upper Marlboro, MD</p>
+                    <a href="tel:3013071414" class="location-card-phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        (301) 307-1414
+                    </a>
+                </div>
+
+                <div class="location-card fade-up fade-up-delay-4">
+                    <div class="location-card-number">5</div>
+                    <h3>Washington DC</h3>
+                    <p class="location-card-address">1329 Kenilworth Ave NE<br>Washington, DC 20019</p>
+                    <a href="tel:3013071414" class="location-card-phone">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        (301) 307-1414
+                    </a>
+                </div>
+            </div>
+
+            <div class="locations-summary fade-up">
+                <p><strong>5 locations. 3 data systems. 1 dashboard.</strong> Every Clover transaction, every Acuity booking, every Rewards App interaction across all 5 Pro Wash sites, connected and visible in real time.</p>
             </div>
         </div>
     </section>
@@ -1185,7 +1668,7 @@
             <div class="cta-content fade-up">
                 <span class="section-label label-green">Let's Talk</span>
                 <h2>Lamond, This Dashboard Was Built for Pro Wash.</h2>
-                <p class="subhead">One tool that makes you more money, makes your life easier, makes you smarter, and makes your team stronger. Book a free 20-minute call with Kay at TaggleFish &mdash; we'll walk you through exactly what your data already shows us.</p>
+                <p class="subhead">Your Clover POS, Acuity Scheduling, and Rewards App data, all connected into one tool that makes you more money, makes your life easier, makes you smarter, and makes your team stronger. Book a free 20-minute call with Kay at TaggleFish and we'll walk you through what your data already shows us.</p>
 
                 <div class="cta-pillars">
                     <div class="cta-pillar-item">
