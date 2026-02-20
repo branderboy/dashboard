@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaggleFish for Pro Wash — Custom Intelligence Dashboard</title>
+    <title>TaggleFish for Pro Wash — Your Business Intelligence Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,20 +25,13 @@
             font-family: 'Poppins', sans-serif;
             font-size: 18px;
             line-height: 1.7;
-            color: #2d3748;
-            background: #ffffff;
+            color: #e2e8f0;
+            background: #0a0e1a;
             overflow-x: hidden;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
 
         /* ========== UTILITIES ========== */
         .container {
@@ -53,43 +46,35 @@
             padding: 0 24px;
         }
 
-        .section-pad {
-            padding: 100px 0;
-        }
-
-        .section-pad-lg {
-            padding: 120px 0;
-        }
-
-        .text-center {
-            text-align: center;
-        }
+        .section-pad { padding: 100px 0; }
+        .section-pad-lg { padding: 120px 0; }
+        .text-center { text-align: center; }
 
         /* ========== TYPOGRAPHY ========== */
         h1, h2, h3, h4 {
-            line-height: 1.2;
+            line-height: 1.15;
             font-weight: 800;
-            color: #1a202c;
+            color: #ffffff;
         }
 
         h1 {
-            font-size: clamp(36px, 5vw, 54px);
-            letter-spacing: -1px;
+            font-size: clamp(40px, 5.5vw, 62px);
+            letter-spacing: -1.5px;
         }
 
         h2 {
-            font-size: clamp(30px, 4vw, 44px);
+            font-size: clamp(32px, 4vw, 48px);
             letter-spacing: -0.5px;
         }
 
         h3 {
-            font-size: clamp(22px, 2.5vw, 26px);
+            font-size: clamp(22px, 2.5vw, 28px);
             font-weight: 700;
         }
 
         .subhead {
-            font-size: clamp(18px, 2vw, 21px);
-            color: #4a5568;
+            font-size: clamp(18px, 2vw, 22px);
+            color: #a0aec0;
             line-height: 1.8;
             font-weight: 400;
         }
@@ -99,22 +84,46 @@
             font-size: 13px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
-            color: #3182ce;
-            background: rgba(49, 130, 206, 0.08);
-            padding: 6px 18px;
+            letter-spacing: 3px;
+            padding: 8px 20px;
             border-radius: 50px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
-        .highlight {
-            color: #2b6cb0;
+        .label-blue {
+            color: #63b3ed;
+            background: rgba(99, 179, 237, 0.1);
+            border: 1px solid rgba(99, 179, 237, 0.2);
         }
 
-        .highlight-bold {
-            color: #2b6cb0;
-            font-weight: 700;
+        .label-green {
+            color: #68d391;
+            background: rgba(104, 211, 145, 0.1);
+            border: 1px solid rgba(104, 211, 145, 0.2);
         }
+
+        .label-gold {
+            color: #f6c85b;
+            background: rgba(246, 200, 91, 0.1);
+            border: 1px solid rgba(246, 200, 91, 0.2);
+        }
+
+        .label-purple {
+            color: #b794f4;
+            background: rgba(183, 148, 244, 0.1);
+            border: 1px solid rgba(183, 148, 244, 0.2);
+        }
+
+        .label-red {
+            color: #fc8181;
+            background: rgba(252, 129, 129, 0.1);
+            border: 1px solid rgba(252, 129, 129, 0.2);
+        }
+
+        .highlight-green { color: #68d391; }
+        .highlight-blue { color: #63b3ed; }
+        .highlight-gold { color: #f6c85b; }
+        .highlight-purple { color: #b794f4; }
 
         /* ========== BUTTONS ========== */
         .btn {
@@ -132,19 +141,17 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #2b6cb0 0%, #3182ce 50%, #4299e1 100%);
+            background: linear-gradient(135deg, #38a169 0%, #48bb78 50%, #68d391 100%);
             color: #ffffff;
-            box-shadow: 0 8px 30px rgba(43, 108, 176, 0.35), 0 2px 6px rgba(43, 108, 176, 0.2);
+            box-shadow: 0 8px 30px rgba(56, 161, 105, 0.35), 0 2px 6px rgba(56, 161, 105, 0.2);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(43, 108, 176, 0.45), 0 4px 10px rgba(43, 108, 176, 0.25);
+            box-shadow: 0 12px 40px rgba(56, 161, 105, 0.5), 0 4px 10px rgba(56, 161, 105, 0.25);
         }
 
-        .btn-primary:active {
-            transform: translateY(-1px);
-        }
+        .btn-primary:active { transform: translateY(-1px); }
 
         .btn-large {
             font-size: 20px;
@@ -152,13 +159,11 @@
             border-radius: 14px;
         }
 
-        .btn-pulse {
-            animation: pulse-glow 2.5s infinite;
-        }
+        .btn-pulse { animation: pulse-glow 2.5s infinite; }
 
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 8px 30px rgba(43, 108, 176, 0.35); }
-            50% { box-shadow: 0 8px 50px rgba(43, 108, 176, 0.55), 0 0 20px rgba(66, 153, 225, 0.2); }
+            0%, 100% { box-shadow: 0 8px 30px rgba(56, 161, 105, 0.35); }
+            50% { box-shadow: 0 8px 50px rgba(56, 161, 105, 0.6), 0 0 30px rgba(104, 211, 145, 0.2); }
         }
 
         /* ========== HEADER ========== */
@@ -168,15 +173,15 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            background: rgba(10, 14, 26, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             transition: box-shadow 0.3s ease;
         }
 
         .header.scrolled {
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
         }
 
         .header-inner {
@@ -195,14 +200,14 @@
             gap: 10px;
             font-size: 24px;
             font-weight: 800;
-            color: #2b6cb0;
+            color: #ffffff;
             letter-spacing: -0.5px;
         }
 
         .logo-icon {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #2b6cb0, #4299e1);
+            background: linear-gradient(135deg, #38a169, #68d391);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -221,8 +226,8 @@
         /* ========== HERO ========== */
         .hero {
             padding-top: 140px;
-            padding-bottom: 100px;
-            background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+            padding-bottom: 80px;
+            background: linear-gradient(180deg, #0d1224 0%, #0a0e1a 100%);
             position: relative;
             overflow: hidden;
         }
@@ -230,22 +235,22 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(66, 153, 225, 0.06) 0%, transparent 70%);
+            top: -300px;
+            right: -300px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(56, 161, 105, 0.08) 0%, transparent 60%);
             border-radius: 50%;
         }
 
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -100px;
-            left: -150px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(43, 108, 176, 0.04) 0%, transparent 70%);
+            bottom: -200px;
+            left: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 179, 237, 0.05) 0%, transparent 60%);
             border-radius: 50%;
         }
 
@@ -261,20 +266,20 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(43, 108, 176, 0.08);
-            color: #2b6cb0;
+            background: rgba(56, 161, 105, 0.1);
+            color: #68d391;
             font-size: 14px;
             font-weight: 600;
             padding: 8px 20px;
             border-radius: 50px;
             margin-bottom: 32px;
-            border: 1px solid rgba(43, 108, 176, 0.12);
+            border: 1px solid rgba(56, 161, 105, 0.2);
         }
 
         .hero-badge-dot {
             width: 8px;
             height: 8px;
-            background: #38a169;
+            background: #68d391;
             border-radius: 50%;
             animation: dot-pulse 1.5s infinite;
         }
@@ -284,9 +289,7 @@
             50% { opacity: 0.4; }
         }
 
-        .hero h1 {
-            margin-bottom: 28px;
-        }
+        .hero h1 { margin-bottom: 28px; }
 
         .hero .subhead {
             margin-bottom: 48px;
@@ -312,110 +315,114 @@
             gap: 8px;
         }
 
-        .hero-trust-icon {
-            font-size: 18px;
-        }
-
-        /* ========== PROBLEM SECTION ========== */
-        .problem {
-            background: #ffffff;
+        /* ========== NARRATIVE INTRO ========== */
+        .narrative {
             position: relative;
+            background: #0a0e1a;
         }
 
-        .problem::before {
+        .narrative::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
         }
 
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 60px;
+        .narrative-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .problem-card {
-            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
-            border: 1px solid #fed7d7;
-            border-radius: 20px;
-            padding: 44px 36px;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .narrative-content p {
+            font-size: 22px;
+            line-height: 1.9;
+            color: #a0aec0;
+            text-align: center;
         }
 
-        .problem-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+        .narrative-content p strong {
+            color: #ffffff;
+            font-weight: 700;
         }
 
-        .problem-card-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #fc8181, #f56565);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: #fff;
-        }
-
-        .problem-card-icon svg,
-        .feature-icon svg,
-        .opportunity-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .problem-card p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #4a5568;
-            font-weight: 500;
-        }
-
-        /* ========== DASHBOARD FEATURES ========== */
-        .features {
-            background: #f7fafc;
+        /* ========== PILLAR SECTIONS ========== */
+        .pillar {
             position: relative;
         }
 
-        .features::before,
-        .features::after {
+        .pillar::before {
             content: '';
             position: absolute;
+            top: 0;
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
         }
 
-        .features::before { top: 0; }
-        .features::after { bottom: 0; }
+        .pillar-dark { background: #0d1224; }
+        .pillar-darker { background: #0a0e1a; }
 
-        .features-grid {
+        .pillar-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 64px;
+        }
+
+        .pillar-header p {
+            margin-top: 16px;
+        }
+
+        .pillar-number {
+            display: inline-block;
+            font-size: 80px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 16px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .pillar-number-green {
+            background-image: linear-gradient(135deg, #38a169, #68d391);
+        }
+
+        .pillar-number-blue {
+            background-image: linear-gradient(135deg, #3182ce, #63b3ed);
+        }
+
+        .pillar-number-gold {
+            background-image: linear-gradient(135deg, #d69e2e, #f6c85b);
+        }
+
+        .pillar-number-purple {
+            background-image: linear-gradient(135deg, #805ad5, #b794f4);
+        }
+
+        /* ========== FEATURE CARDS ========== */
+        .feature-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 60px;
+            gap: 24px;
+        }
+
+        .feature-grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .feature-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 20px;
             padding: 40px 32px;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
@@ -426,38 +433,58 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #2b6cb0, #4299e1);
+            height: 3px;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
         }
 
         .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
-            border-color: #bee3f8;
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        .feature-card:hover::before {
-            opacity: 1;
-        }
+        .feature-card:hover::before { opacity: 1; }
+
+        .card-green::before { background: linear-gradient(90deg, #38a169, #68d391); }
+        .card-green:hover { border-color: rgba(104, 211, 145, 0.2); box-shadow: 0 20px 60px rgba(56, 161, 105, 0.1); }
+
+        .card-blue::before { background: linear-gradient(90deg, #3182ce, #63b3ed); }
+        .card-blue:hover { border-color: rgba(99, 179, 237, 0.2); box-shadow: 0 20px 60px rgba(49, 130, 206, 0.1); }
+
+        .card-gold::before { background: linear-gradient(90deg, #d69e2e, #f6c85b); }
+        .card-gold:hover { border-color: rgba(246, 200, 91, 0.2); box-shadow: 0 20px 60px rgba(214, 158, 46, 0.1); }
+
+        .card-purple::before { background: linear-gradient(90deg, #805ad5, #b794f4); }
+        .card-purple:hover { border-color: rgba(183, 148, 244, 0.2); box-shadow: 0 20px 60px rgba(128, 90, 213, 0.1); }
 
         .feature-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #ebf8ff, #bee3f8);
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            color: #2b6cb0;
+        }
+
+        .icon-green { background: rgba(56, 161, 105, 0.15); color: #68d391; }
+        .icon-blue { background: rgba(49, 130, 206, 0.15); color: #63b3ed; }
+        .icon-gold { background: rgba(214, 158, 46, 0.15); color: #f6c85b; }
+        .icon-purple { background: rgba(128, 90, 213, 0.15); color: #b794f4; }
+
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         .feature-card h3 {
             font-size: 20px;
             margin-bottom: 12px;
-            color: #1a202c;
         }
 
         .feature-card p {
@@ -466,65 +493,120 @@
             color: #718096;
         }
 
-        .feature-number {
-            position: absolute;
-            top: 16px;
-            right: 20px;
-            font-size: 13px;
-            font-weight: 700;
+        /* ========== BIG STAT ========== */
+        .big-stat {
+            text-align: center;
+            padding: 20px 0 0;
+        }
+
+        .big-stat-number {
+            font-size: clamp(48px, 8vw, 80px);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 12px;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .big-stat-label {
+            font-size: 18px;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        /* ========== STORY QUOTE ========== */
+        .story-quote {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 4px solid;
+            border-radius: 0 16px 16px 0;
+            padding: 40px 48px;
+            margin: 60px 0 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .story-quote p {
+            font-size: 20px;
+            line-height: 1.8;
             color: #cbd5e0;
-            letter-spacing: 0.5px;
+            font-style: italic;
         }
 
-        /* ========== OPPORTUNITY ========== */
-        .opportunity {
-            background: #ffffff;
+        .story-quote .quote-label {
+            display: block;
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
         }
 
-        .opportunity-grid {
+        .quote-green { border-color: #68d391; }
+        .quote-green .quote-label { color: #68d391; }
+        .quote-blue { border-color: #63b3ed; }
+        .quote-blue .quote-label { color: #63b3ed; }
+        .quote-gold { border-color: #f6c85b; }
+        .quote-gold .quote-label { color: #f6c85b; }
+        .quote-purple { border-color: #b794f4; }
+        .quote-purple .quote-label { color: #b794f4; }
+
+        /* ========== BEFORE/AFTER ========== */
+        .before-after {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 60px;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 64px;
         }
 
-        .opportunity-card {
-            background: linear-gradient(135deg, #f0fff4 0%, #fff 100%);
-            border: 1px solid #c6f6d5;
+        .before-col, .after-col {
             border-radius: 20px;
             padding: 44px 36px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
         }
 
-        .opportunity-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+        .before-col {
+            background: rgba(252, 129, 129, 0.05);
+            border: 1px solid rgba(252, 129, 129, 0.15);
         }
 
-        .opportunity-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #68d391, #48bb78);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: #fff;
+        .after-col {
+            background: rgba(104, 211, 145, 0.05);
+            border: 1px solid rgba(104, 211, 145, 0.15);
         }
 
-        .opportunity-card p {
+        .before-col h3, .after-col h3 {
             font-size: 18px;
-            line-height: 1.8;
-            color: #4a5568;
-            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+        }
+
+        .before-col h3 { color: #fc8181; }
+        .after-col h3 { color: #68d391; }
+
+        .ba-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #a0aec0;
+        }
+
+        .ba-item:last-child { margin-bottom: 0; }
+
+        .ba-icon {
+            flex-shrink: 0;
+            margin-top: 3px;
         }
 
         /* ========== HOW IT WORKS ========== */
         .how-it-works {
-            background: #f7fafc;
             position: relative;
+            background: #0d1224;
         }
 
         .how-it-works::before {
@@ -534,7 +616,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
         }
 
         .steps {
@@ -552,7 +634,7 @@
             left: 16%;
             right: 16%;
             height: 3px;
-            background: linear-gradient(90deg, #bee3f8, #90cdf4, #bee3f8);
+            background: linear-gradient(90deg, rgba(104,211,145,0.3), rgba(99,179,237,0.3), rgba(183,148,244,0.3));
             border-radius: 2px;
         }
 
@@ -565,7 +647,7 @@
         .step-number {
             width: 96px;
             height: 96px;
-            background: linear-gradient(135deg, #2b6cb0, #4299e1);
+            background: linear-gradient(135deg, #38a169, #68d391);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -574,8 +656,8 @@
             font-size: 40px;
             font-weight: 900;
             color: #ffffff;
-            box-shadow: 0 8px 32px rgba(43, 108, 176, 0.25);
-            border: 5px solid #fff;
+            box-shadow: 0 8px 32px rgba(56, 161, 105, 0.3);
+            border: 5px solid #0d1224;
         }
 
         .step h3 {
@@ -593,7 +675,7 @@
 
         /* ========== CTA SECTION ========== */
         .cta-section {
-            background: linear-gradient(135deg, #ebf8ff 0%, #dbeafe 50%, #e0f0ff 100%);
+            background: linear-gradient(135deg, rgba(56, 161, 105, 0.08) 0%, rgba(49, 130, 206, 0.05) 50%, rgba(128, 90, 213, 0.05) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -601,11 +683,21 @@
         .cta-section::before {
             content: '';
             position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
             top: -100px;
             right: -100px;
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(66, 153, 225, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(56, 161, 105, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -617,25 +709,42 @@
             margin: 0 auto;
         }
 
-        .cta-content h2 {
-            margin-bottom: 20px;
-        }
-
-        .cta-content .subhead {
-            margin-bottom: 48px;
-        }
+        .cta-content h2 { margin-bottom: 20px; }
+        .cta-content .subhead { margin-bottom: 48px; }
 
         .cta-note {
             margin-top: 24px;
             font-size: 15px;
-            color: #718096;
+            color: #4a5568;
             font-style: italic;
+        }
+
+        .cta-pillars {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .cta-pillar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .cta-pillar-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
         }
 
         /* ========== FOOTER ========== */
         .footer {
-            background: #ffffff;
-            border-top: 1px solid #e2e8f0;
+            background: #0a0e1a;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding: 48px 0;
             text-align: center;
         }
@@ -646,14 +755,14 @@
             gap: 10px;
             font-size: 20px;
             font-weight: 800;
-            color: #2b6cb0;
+            color: #ffffff;
             margin-bottom: 12px;
         }
 
         .footer-logo-icon {
             width: 32px;
             height: 32px;
-            background: linear-gradient(135deg, #2b6cb0, #4299e1);
+            background: linear-gradient(135deg, #38a169, #68d391);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -665,20 +774,22 @@
 
         .footer-tagline {
             font-size: 15px;
-            color: #a0aec0;
+            color: #4a5568;
             margin-bottom: 8px;
         }
 
         .footer-copy {
             font-size: 13px;
-            color: #cbd5e0;
+            color: #2d3748;
         }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
-            .problem-grid,
-            .features-grid,
-            .opportunity-grid {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-grid-2 {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -694,22 +805,21 @@
         }
 
         @media (max-width: 768px) {
-            .section-pad {
-                padding: 72px 0;
-            }
-
-            .section-pad-lg {
-                padding: 80px 0;
-            }
+            .section-pad { padding: 72px 0; }
+            .section-pad-lg { padding: 80px 0; }
 
             .hero {
                 padding-top: 120px;
-                padding-bottom: 72px;
+                padding-bottom: 60px;
             }
 
-            .problem-grid,
-            .features-grid,
-            .opportunity-grid {
+            .feature-grid,
+            .feature-grid-2 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .before-after {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
@@ -719,9 +829,7 @@
                 gap: 48px;
             }
 
-            .steps::before {
-                display: none;
-            }
+            .steps::before { display: none; }
 
             .btn {
                 padding: 18px 36px;
@@ -734,18 +842,14 @@
                 font-size: 19px;
             }
 
-            .header-inner {
-                height: 70px;
-            }
+            .header-inner { height: 70px; }
 
             .header .btn {
                 font-size: 13px;
                 padding: 12px 20px;
             }
 
-            .logo {
-                font-size: 20px;
-            }
+            .logo { font-size: 20px; }
 
             .logo-icon {
                 width: 34px;
@@ -758,29 +862,26 @@
                 gap: 16px;
             }
 
-            .problem-card,
-            .opportunity-card {
-                padding: 36px 28px;
-            }
+            .feature-card { padding: 32px 24px; }
 
-            .feature-card {
-                padding: 32px 24px;
+            .story-quote { padding: 32px 28px; }
+
+            .narrative-content p { font-size: 19px; }
+
+            .cta-pillars {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
             }
         }
 
         @media (max-width: 480px) {
-            body {
-                font-size: 16px;
-            }
+            body { font-size: 16px; }
 
             .container,
-            .container-narrow {
-                padding: 0 16px;
-            }
+            .container-narrow { padding: 0 16px; }
 
-            .hero {
-                padding-top: 100px;
-            }
+            .hero { padding-top: 100px; }
         }
 
         /* ========== ANIMATIONS ========== */
@@ -824,20 +925,20 @@
                     <span class="hero-badge-dot"></span>
                     Built Exclusively for Pro Wash
                 </div>
-                <h1>Lamond, Here's Exactly What's Happening Across Your 5 Pro Wash Locations</h1>
-                <p class="subhead">TaggleFish built a custom intelligence dashboard specifically for Pro Wash &mdash; connecting your Clover POS and Acuity booking data into one place so you always know what's working, what's not, and what to do next across all your DMV locations.</p>
-                <a href="#dashboard" class="btn btn-primary btn-large btn-pulse">See What We Built for Pro Wash</a>
+                <h1>Lamond, You Built a 5-Location Empire.<br><span class="highlight-green">Now It's Time to Run It Like One.</span></h1>
+                <p class="subhead">You didn't grow Pro Wash by guessing. But right now, your data is scattered across Clover, Acuity, and your own gut. TaggleFish brings it all together &mdash; so every decision you make is backed by the numbers.</p>
+                <a href="#book-call" class="btn btn-primary btn-large btn-pulse">See What We Built for Pro Wash</a>
                 <div class="hero-trust">
                     <div class="hero-trust-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38a169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         Clover POS Integration
                     </div>
                     <div class="hero-trust-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38a169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         Acuity Scheduling Sync
                     </div>
                     <div class="hero-trust-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38a169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         5 DMV Locations
                     </div>
                 </div>
@@ -845,125 +946,208 @@
         </div>
     </section>
 
-    <!-- ========== THE PROBLEM ========== -->
-    <section class="problem section-pad" id="problem">
+    <!-- ========== THE STORY ========== -->
+    <section class="narrative section-pad" id="story">
         <div class="container">
-            <div class="text-center">
-                <span class="section-label">The Challenge</span>
-                <h2>Running 5 locations across the DMV means a lot of moving parts.</h2>
-            </div>
-            <div class="problem-grid">
-                <div class="problem-card fade-up">
-                    <div class="problem-card-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-                    <p>Your Clover and Acuity data lives in separate places &mdash; you never see the full picture at once.</p>
-                </div>
-                <div class="problem-card fade-up fade-up-delay-1">
-                    <div class="problem-card-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-                    <p>You don't know which location is underperforming, when to staff up, or which customers stopped coming back.</p>
-                </div>
-                <div class="problem-card fade-up fade-up-delay-2">
-                    <div class="problem-card-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-                    <p>You're leaving money on the table every week without knowing exactly when and where.</p>
-                </div>
+            <div class="narrative-content fade-up">
+                <p>You've got 5 locations humming across the DMV. Customers rolling in. Staff on the ground. Revenue flowing through Clover every single day. <strong>But here's the truth:</strong> you're running a multi-location operation with single-location visibility. You check one system for sales, another for bookings, and your gut for everything else. <strong>That worked to get you here. It won't get you to what's next.</strong></p>
             </div>
         </div>
     </section>
 
-    <!-- ========== WHAT WE BUILT ========== -->
-    <section class="features section-pad" id="dashboard">
+    <!-- ================================================================ -->
+    <!-- PILLAR 1: MAKE MORE MONEY -->
+    <!-- ================================================================ -->
+    <section class="pillar pillar-dark section-pad-lg" id="more-money">
         <div class="container">
-            <div class="text-center">
-                <span class="section-label">Your Custom Dashboard</span>
-                <h2>Here's what your dashboard shows you &mdash; built around how Pro Wash actually operates</h2>
+            <div class="pillar-header fade-up">
+                <span class="pillar-number pillar-number-green">01</span>
+                <span class="section-label label-green">Make More Money</span>
+                <h2>Stop Leaving Revenue on the Table You Can't Even See</h2>
+                <p class="subhead">Your 5 locations generate thousands of transactions every month. But right now, you don't know which location is underperforming, which services are carrying revenue, or how much no-shows are actually costing you. The dashboard changes that.</p>
             </div>
-            <div class="features-grid">
-                <!-- 1 -->
-                <div class="feature-card fade-up">
-                    <span class="feature-number">01</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-                    <h3>Revenue &amp; Sales</h3>
-                    <p>See total revenue across all 5 Pro Wash locations updated daily. Know which DMV location is leading and which needs attention.</p>
+
+            <div class="feature-grid fade-up">
+                <div class="feature-card card-green">
+                    <div class="feature-icon icon-green"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                    <h3>Revenue by Location</h3>
+                    <p>See which of your 5 locations is leading and which one quietly dropped 15% last month. Updated daily from Clover &mdash; no spreadsheets needed.</p>
                 </div>
-                <!-- 2 -->
-                <div class="feature-card fade-up fade-up-delay-1">
-                    <span class="feature-number">02</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-                    <h3>Bookings vs Walk-ins</h3>
-                    <p>See exactly how much revenue came from Acuity appointments vs customers who pulled up. Know where your bookings are strong and where you're relying too heavy on walk-ins.</p>
+                <div class="feature-card card-green">
+                    <div class="feature-icon icon-green"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                    <h3>No-Show Cost Tracker</h3>
+                    <p>Every missed Acuity appointment has a dollar value. Your dashboard calculates exactly how much no-shows and cancellations cost Pro Wash every single month.</p>
                 </div>
-                <!-- 3 -->
-                <div class="feature-card fade-up fade-up-delay-2">
-                    <span class="feature-number">03</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div>
-                    <h3>Booking Performance</h3>
-                    <p>Track no-shows, cancellations, and exactly how much revenue that cost Pro Wash this month.</p>
+                <div class="feature-card card-green">
+                    <div class="feature-icon icon-green"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <h3>Untapped Zip Codes</h3>
+                    <p>See exactly which DMV zip codes you're not reaching yet. Your next 500 customers are already in a radius around your locations &mdash; we show you where.</p>
                 </div>
-                <!-- 4 -->
-                <div class="feature-card fade-up fade-up-delay-3">
-                    <span class="feature-number">04</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                    <h3>Peak Hours &amp; Traffic</h3>
-                    <p>Know your busiest windows at every location. DMV traffic and weather patterns hit differently &mdash; your dashboard accounts for that.</p>
+            </div>
+
+            <div class="story-quote quote-green fade-up">
+                <p>"What if you found out that one location has been losing $3,200/month to no-shows &mdash; and a simple text reminder could cut that in half? That's the kind of money your dashboard puts back in your pocket."</p>
+                <span class="quote-label">What your data will reveal</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PILLAR 2: MAKE LIFE EASIER -->
+    <!-- ================================================================ -->
+    <section class="pillar pillar-darker section-pad-lg" id="easier">
+        <div class="container">
+            <div class="pillar-header fade-up">
+                <span class="pillar-number pillar-number-blue">02</span>
+                <span class="section-label label-blue">Make Life Easier</span>
+                <h2>One Screen. Five Locations. Zero Guesswork.</h2>
+                <p class="subhead">Right now you're logging into Clover, opening Acuity, texting managers, and checking reports from three different systems. Your dashboard puts everything on one screen &mdash; so you can run your business from your phone, your couch, or your car.</p>
+            </div>
+
+            <div class="before-after fade-up">
+                <div class="before-col">
+                    <h3>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        Before the Dashboard
+                    </h3>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                        <span>Log into Clover separately for each location to check numbers</span>
+                    </div>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                        <span>Switch to Acuity to see bookings and no-shows</span>
+                    </div>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                        <span>Text managers to get a feel for what's happening on the ground</span>
+                    </div>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc8181" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                        <span>End of month: still not sure which location actually performed</span>
+                    </div>
                 </div>
-                <!-- 5 -->
-                <div class="feature-card fade-up fade-up-delay-4">
-                    <span class="feature-number">05</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div class="after-col">
+                    <h3>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><polyline points="20 6 9 17 4 12"/></svg>
+                        After the Dashboard
+                    </h3>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        <span>Open one screen &mdash; all 5 locations, all revenue, all bookings</span>
+                    </div>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        <span>Know which location needs attention in under 10 seconds</span>
+                    </div>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        <span>Bookings vs. walk-ins, peak hours, and staffing &mdash; all automatic</span>
+                    </div>
+                    <div class="ba-item">
+                        <span class="ba-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        <span>Check it from your phone at dinner &mdash; 30 seconds and you're done</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-quote quote-blue fade-up">
+                <p>"You didn't build Pro Wash to spend your nights buried in reports. The dashboard gives you back your time &mdash; so you can spend it growing the business, not chasing data."</p>
+                <span class="quote-label">Your new daily reality</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PILLAR 3: MAKE YOU SMARTER -->
+    <!-- ================================================================ -->
+    <section class="pillar pillar-dark section-pad-lg" id="smarter">
+        <div class="container">
+            <div class="pillar-header fade-up">
+                <span class="pillar-number pillar-number-gold">03</span>
+                <span class="section-label label-gold">Make You Smarter</span>
+                <h2>Decisions Backed by Data, Not Gut Feelings</h2>
+                <p class="subhead">You've made great decisions to get here. But at 5 locations, instinct alone starts to miss things. The dashboard turns your Clover and Acuity data into intelligence you can act on &mdash; before problems become expensive.</p>
+            </div>
+
+            <div class="feature-grid fade-up">
+                <div class="feature-card card-gold">
+                    <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                    <h3>90-Day Revenue Forecast</h3>
+                    <p>See where Pro Wash revenue is headed based on real trends across all 5 locations &mdash; not a guess, a projection built from your actual data.</p>
+                </div>
+                <div class="feature-card card-gold">
+                    <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div>
+                    <h3>Bookings vs. Walk-In Ratio</h3>
+                    <p>Know exactly how much revenue comes from scheduled Acuity appointments vs. drive-ups. See which locations rely too heavily on walk-ins so you can fix it.</p>
+                </div>
+                <div class="feature-card card-gold">
+                    <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <h3>Peak Hour Intelligence</h3>
+                    <p>Discover your busiest windows at every location. DMV traffic and weather patterns hit differently &mdash; your dashboard shows the real patterns, not assumptions.</p>
+                </div>
+                <div class="feature-card card-gold">
+                    <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                    <h3>Campaign Day Calendar</h3>
+                    <p>Get told exactly when to run promotions &mdash; before every major holiday, seasonal shift, and slow period hitting the DMV market. Timed to your data.</p>
+                </div>
+                <div class="feature-card card-gold">
+                    <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                    <h3>Customer Retention Signals</h3>
+                    <p>See who's coming back, who stopped, and who's at risk of leaving &mdash; with specific numbers for each Pro Wash location. Catch churn before it happens.</p>
+                </div>
+                <div class="feature-card card-gold">
+                    <div class="feature-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+                    <h3>Competitor & Market Flags</h3>
+                    <p>Know when a competitor opens nearby, when seasonal car wash demand spikes in your area, and which zip codes have growing demand you're not capturing yet.</p>
+                </div>
+            </div>
+
+            <div class="story-quote quote-gold fade-up">
+                <p>"Imagine walking into a meeting knowing exactly which location is up 22% this month, why your College Park bookings dropped on Tuesdays, and that Bowie is your highest-value zip code for detailing. That's not a fantasy &mdash; that's your Tuesday morning with the dashboard."</p>
+                <span class="quote-label">The intelligence advantage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- PILLAR 4: EMPOWER YOUR STAFF -->
+    <!-- ================================================================ -->
+    <section class="pillar pillar-darker section-pad-lg" id="staff">
+        <div class="container">
+            <div class="pillar-header fade-up">
+                <span class="pillar-number pillar-number-purple">04</span>
+                <span class="section-label label-purple">Empower Your Staff</span>
+                <h2>Give Your Managers the Tools to Run Their Location Like Owners</h2>
+                <p class="subhead">You can't be at 5 locations at once. But right now, your managers are flying blind. They don't know if they're ahead or behind, when to staff up, or how their location compares. The dashboard gives them visibility &mdash; so they make better decisions without calling you first.</p>
+            </div>
+
+            <div class="feature-grid feature-grid-2 fade-up">
+                <div class="feature-card card-purple">
+                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
                     <h3>Staffing Intelligence</h3>
-                    <p>Know exactly which days need all hands on deck across your 5 locations and which days you can run lean. No more guessing.</p>
+                    <p>Your managers see exactly which days need all hands on deck and which days they can run lean. Data-driven scheduling instead of guesswork &mdash; across all 5 locations.</p>
                 </div>
-                <!-- 6 -->
-                <div class="feature-card fade-up fade-up-delay-5">
-                    <span class="feature-number">06</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-                    <h3>Customer Retention</h3>
-                    <p>See who's coming back, who stopped, and who's at risk of leaving &mdash; with specific numbers for each Pro Wash location.</p>
+                <div class="feature-card card-purple">
+                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+                    <h3>Daily Performance View</h3>
+                    <p>Each manager sees their location's daily revenue, booking count, walk-in traffic, and how they stack up. Healthy competition drives results without you having to push.</p>
                 </div>
-                <!-- 7 -->
-                <div class="feature-card fade-up">
-                    <span class="feature-number">07</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-                    <h3>Campaign Day Intelligence</h3>
-                    <p>Get told exactly when to run promotions before every major holiday, seasonal shift, and slow period hitting the DMV market.</p>
+                <div class="feature-card card-purple">
+                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+                    <h3>Referral Tracking</h3>
+                    <p>Staff can see which customers are sending new business to their location. They know who to thank, who to reward, and who's building your reputation for you.</p>
                 </div>
-                <!-- 8 -->
-                <div class="feature-card fade-up fade-up-delay-1">
-                    <span class="feature-number">08</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
-                    <h3>Referral &amp; Incentive Programs</h3>
-                    <p>Track which customers are sending Pro Wash new business and flag who's earned a reward automatically.</p>
-                </div>
-                <!-- 9 -->
-                <div class="feature-card fade-up fade-up-delay-2">
-                    <span class="feature-number">09</span>
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-                    <h3>Intelligence &amp; Opportunities</h3>
-                    <p>The command center. See your highest-value customer segments, which DMV zip codes you're not reaching yet, ready-to-run ad campaigns for Google and Meta, competitor flags, and a 90-day revenue forecast &mdash; all in one place.</p>
+                <div class="feature-card card-purple">
+                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                    <h3>Goal & Accountability Signals</h3>
+                    <p>Set revenue targets per location and let your managers track their own progress in real time. When they own the number, they own the result.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ========== OPPORTUNITY ========== -->
-    <section class="opportunity section-pad" id="opportunity">
-        <div class="container">
-            <div class="text-center">
-                <span class="section-label">The Opportunity</span>
-                <h2>Here's what we already know about Pro Wash's opportunity</h2>
-            </div>
-            <div class="opportunity-grid">
-                <div class="opportunity-card fade-up">
-                    <div class="opportunity-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                    <p>5 locations across DC and Maryland means zip code overlap and untapped neighborhoods. Your dashboard maps exactly where your customers are coming from and where your next ones are hiding.</p>
-                </div>
-                <div class="opportunity-card fade-up fade-up-delay-1">
-                    <div class="opportunity-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-                    <p>No-shows on booked detailing appointments are silent revenue killers. Your dashboard puts a dollar amount on that every single month so you can act on it.</p>
-                </div>
-                <div class="opportunity-card fade-up fade-up-delay-2">
-                    <div class="opportunity-icon"><svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
-                    <p>The DMV has distinct seasonal patterns &mdash; post-winter dirty car season, summer humidity, and fall prep. Your campaign calendar is built around those windows specifically.</p>
-                </div>
+            <div class="story-quote quote-purple fade-up">
+                <p>"Your best managers want to win &mdash; they just can't see the scoreboard. Give them visibility and watch what happens. When your team sees the numbers, they stop waiting for direction and start driving results on their own."</p>
+                <span class="quote-label">The leadership multiplier</span>
             </div>
         </div>
     </section>
@@ -971,25 +1155,25 @@
     <!-- ========== HOW IT WORKS ========== -->
     <section class="how-it-works section-pad" id="how-it-works">
         <div class="container">
-            <div class="text-center">
-                <span class="section-label">How It Works</span>
-                <h2>Getting started is simple</h2>
+            <div class="text-center fade-up">
+                <span class="section-label label-green">How It Works</span>
+                <h2>Getting Started Takes 10 Minutes</h2>
             </div>
             <div class="steps">
                 <div class="step fade-up">
                     <div class="step-number">1</div>
                     <h3>Connect Your Data</h3>
-                    <p>We connect to your existing Clover and Acuity accounts &mdash; takes less than 10 minutes.</p>
+                    <p>We connect to your existing Clover POS and Acuity accounts. You don't touch a thing &mdash; it takes less than 10 minutes.</p>
                 </div>
                 <div class="step fade-up fade-up-delay-1">
                     <div class="step-number">2</div>
                     <h3>We Build Your Dashboard</h3>
-                    <p>TaggleFish builds your custom Pro Wash dashboard &mdash; ready within a few days.</p>
+                    <p>TaggleFish builds your custom Pro Wash intelligence dashboard &mdash; designed around how your 5 locations actually operate.</p>
                 </div>
                 <div class="step fade-up fade-up-delay-2">
                     <div class="step-number">3</div>
                     <h3>See Everything, Everywhere</h3>
-                    <p>Log in from anywhere and see everything across all 5 locations in one place &mdash; updated automatically every day.</p>
+                    <p>Log in from any device and see every location, every metric, every insight &mdash; updated automatically every single day.</p>
                 </div>
             </div>
         </div>
@@ -998,10 +1182,30 @@
     <!-- ========== CTA ========== -->
     <section class="cta-section section-pad-lg" id="book-call">
         <div class="container">
-            <div class="cta-content">
-                <span class="section-label">Let's Talk</span>
-                <h2>Lamond, let's get Pro Wash on the dashboard.</h2>
-                <p class="subhead">Book a free 20-minute call with Kay at TaggleFish. We'll walk you through exactly what your data already shows us and what we can build for you.</p>
+            <div class="cta-content fade-up">
+                <span class="section-label label-green">Let's Talk</span>
+                <h2>Lamond, This Dashboard Was Built for Pro Wash.</h2>
+                <p class="subhead">One tool that makes you more money, makes your life easier, makes you smarter, and makes your team stronger. Book a free 20-minute call with Kay at TaggleFish &mdash; we'll walk you through exactly what your data already shows us.</p>
+
+                <div class="cta-pillars">
+                    <div class="cta-pillar-item">
+                        <span class="cta-pillar-dot" style="background: #68d391;"></span>
+                        <span class="highlight-green">More Money</span>
+                    </div>
+                    <div class="cta-pillar-item">
+                        <span class="cta-pillar-dot" style="background: #63b3ed;"></span>
+                        <span class="highlight-blue">Easier Life</span>
+                    </div>
+                    <div class="cta-pillar-item">
+                        <span class="cta-pillar-dot" style="background: #f6c85b;"></span>
+                        <span class="highlight-gold">Smarter Decisions</span>
+                    </div>
+                    <div class="cta-pillar-item">
+                        <span class="cta-pillar-dot" style="background: #b794f4;"></span>
+                        <span class="highlight-purple">Empowered Staff</span>
+                    </div>
+                </div>
+
                 <a href="YOUR_CALENDLY_LINK" class="btn btn-primary btn-large btn-pulse" target="_blank" rel="noopener">Book My Free Call with Kay</a>
                 <p class="cta-note">No pressure. No pitch deck. Just your data and what it means for Pro Wash.</p>
             </div>
