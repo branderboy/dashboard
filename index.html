@@ -73,19 +73,19 @@
         }
 
         .subhead {
-            font-size: clamp(18px, 2vw, 22px);
-            color: #a0aec0;
+            font-size: clamp(20px, 2.2vw, 24px);
+            color: #e2e8f0;
             line-height: 1.8;
             font-weight: 400;
         }
 
         .section-label {
             display: inline-block;
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3px;
-            padding: 8px 20px;
+            padding: 10px 24px;
             border-radius: 50px;
             margin-bottom: 24px;
         }
@@ -305,8 +305,8 @@
             justify-content: center;
             gap: 32px;
             flex-wrap: wrap;
-            font-size: 15px;
-            color: #718096;
+            font-size: 17px;
+            color: #e2e8f0;
         }
 
         .hero-trust-item {
@@ -342,9 +342,9 @@
         }
 
         .narrative-top-text p {
-            font-size: 22px;
+            font-size: 24px;
             line-height: 1.9;
-            color: #a0aec0;
+            color: #e2e8f0;
         }
 
         .narrative-top-text p strong {
@@ -353,12 +353,14 @@
         }
 
         /* Location pins row */
+        /* ---- Location pins section ---- */
         .location-pins {
             display: flex;
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 56px;
+            padding-bottom: 48px;
+            margin-bottom: 0;
         }
 
         .location-pin {
@@ -378,9 +380,7 @@
             transform: translateY(-2px);
         }
 
-        .location-pin svg {
-            flex-shrink: 0;
-        }
+        .location-pin svg { flex-shrink: 0; }
 
         .location-pin span {
             font-size: 16px;
@@ -389,13 +389,56 @@
             letter-spacing: 0.02em;
         }
 
-        /* Systems visual */
+        /* ---- Separator between sections ---- */
+        .narrative-divider {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 12px 0;
+        }
+
+        .narrative-divider::before,
+        .narrative-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .narrative-divider-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            flex-shrink: 0;
+        }
+
+        /* ---- Systems graphic card ---- */
+        .systems-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 24px;
+            padding: 56px 40px;
+            margin: 0 0 0 0;
+        }
+
+        .systems-card-label {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #cbd5e0;
+            margin-bottom: 36px;
+        }
+
         .systems-visual {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
-            margin-bottom: 56px;
             flex-wrap: wrap;
         }
 
@@ -440,8 +483,8 @@
         }
 
         .system-node-sub {
-            font-size: 14px;
-            color: #a0aec0;
+            font-size: 16px;
+            color: #e2e8f0;
             font-weight: 500;
         }
 
@@ -483,19 +526,19 @@
             filter: drop-shadow(0 0 6px rgba(183,148,244,0.4));
         }
 
-        /* Bottom text */
+        /* ---- Bottom callout ---- */
         .narrative-bottom-text {
             text-align: center;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px;
-            padding: 36px 40px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 48px 48px;
         }
 
         .narrative-bottom-text p {
-            font-size: 22px;
+            font-size: 24px;
             line-height: 1.8;
-            color: #cbd5e0;
+            color: #f7fafc;
         }
 
         .narrative-bottom-text strong {
@@ -504,6 +547,7 @@
         }
 
         @media (max-width: 768px) {
+            .systems-card { padding: 40px 20px; }
             .systems-visual { gap: 14px; }
             .system-node { min-width: 140px; padding: 28px 20px; }
             .system-node-icon { width: 56px; height: 56px; }
@@ -511,11 +555,12 @@
             .system-arrow-line { width: 36px; }
             .location-pins { gap: 10px; }
             .location-pin { padding: 12px 20px; }
-            .narrative-bottom-text { padding: 28px 24px; }
+            .narrative-bottom-text { padding: 32px 24px; }
             .narrative-bottom-text p { font-size: 19px; }
         }
 
         @media (max-width: 480px) {
+            .systems-card { padding: 32px 16px; }
             .systems-visual { flex-direction: column; gap: 16px; }
             .system-node { min-width: 200px; }
             .system-arrow { transform: rotate(90deg); }
@@ -677,9 +722,9 @@
         }
 
         .feature-card p {
-            font-size: 16px;
+            font-size: 17px;
             line-height: 1.7;
-            color: #718096;
+            color: #e2e8f0;
         }
 
         /* ========== BIG STAT ========== */
@@ -699,8 +744,8 @@
         }
 
         .big-stat-label {
-            font-size: 18px;
-            color: #718096;
+            font-size: 20px;
+            color: #e2e8f0;
             font-weight: 500;
         }
 
@@ -717,16 +762,16 @@
         }
 
         .story-quote p {
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1.8;
-            color: #cbd5e0;
+            color: #f7fafc;
             font-style: italic;
         }
 
         .story-quote .quote-label {
             display: block;
             font-style: normal;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -855,11 +900,11 @@
 
         .data-source-tag {
             display: inline-block;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            padding: 4px 12px;
+            padding: 6px 14px;
             border-radius: 6px;
             margin-bottom: 16px;
         }
@@ -869,9 +914,9 @@
         .tag-rewards { color: #f6c85b; background: rgba(246, 200, 91, 0.1); }
 
         .data-source-card p {
-            font-size: 15px;
+            font-size: 17px;
             line-height: 1.7;
-            color: #718096;
+            color: #e2e8f0;
         }
 
         .data-source-list {
@@ -881,9 +926,9 @@
         }
 
         .data-source-list li {
-            font-size: 15px;
-            color: #a0aec0;
-            padding: 6px 0;
+            font-size: 17px;
+            color: #e2e8f0;
+            padding: 8px 0;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -903,8 +948,8 @@
         }
 
         .data-infra-connector p {
-            font-size: 18px;
-            color: #a0aec0;
+            font-size: 20px;
+            color: #e2e8f0;
         }
 
         .data-infra-connector strong {
@@ -917,9 +962,9 @@
             justify-content: center;
             gap: 16px;
             margin-bottom: 16px;
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 600;
-            color: #718096;
+            color: #e2e8f0;
         }
 
         .connector-arrow svg {
@@ -973,9 +1018,9 @@
             align-items: flex-start;
             gap: 12px;
             margin-bottom: 20px;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.6;
-            color: #a0aec0;
+            color: #e2e8f0;
         }
 
         .ba-item:last-child { margin-bottom: 0; }
@@ -1048,8 +1093,8 @@
         }
 
         .step p {
-            font-size: 17px;
-            color: #718096;
+            font-size: 18px;
+            color: #e2e8f0;
             line-height: 1.7;
             max-width: 320px;
             margin: 0 auto;
@@ -1096,8 +1141,8 @@
 
         .cta-note {
             margin-top: 24px;
-            font-size: 15px;
-            color: #4a5568;
+            font-size: 17px;
+            color: #cbd5e0;
             font-style: italic;
         }
 
@@ -1113,7 +1158,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 600;
         }
 
@@ -1199,9 +1244,9 @@
         }
 
         .location-card-address {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1.6;
-            color: #718096;
+            color: #e2e8f0;
         }
 
         .location-card-phone {
@@ -1209,7 +1254,7 @@
             align-items: center;
             gap: 6px;
             margin-top: 14px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             color: #68d391;
             text-decoration: none;
@@ -1227,8 +1272,8 @@
         }
 
         .locations-summary p {
-            font-size: 16px;
-            color: #a0aec0;
+            font-size: 18px;
+            color: #e2e8f0;
         }
 
         .locations-summary strong { color: #ffffff; }
@@ -1286,14 +1331,14 @@
         }
 
         .footer-tagline {
-            font-size: 15px;
-            color: #4a5568;
+            font-size: 16px;
+            color: #a0aec0;
             margin-bottom: 8px;
         }
 
         .footer-copy {
-            font-size: 13px;
-            color: #2d3748;
+            font-size: 15px;
+            color: #718096;
         }
 
         /* ========== RESPONSIVE ========== */
@@ -1358,7 +1403,7 @@
             .header-inner { height: 70px; }
 
             .header .btn {
-                font-size: 13px;
+                font-size: 15px;
                 padding: 12px 20px;
             }
 
@@ -1380,7 +1425,7 @@
             .story-quote { padding: 32px 28px; }
 
             .narrative-top-text p,
-            .narrative-bottom-text p { font-size: 19px; }
+            .narrative-bottom-text p { font-size: 20px; }
 
             .cta-pillars {
                 flex-direction: column;
@@ -1493,39 +1538,56 @@
                     </div>
                 </div>
 
-                <!-- Disconnected systems graphic -->
-                <div class="systems-visual fade-up">
-                    <div class="system-node">
-                        <div class="system-node-icon sn-clover">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <!-- Divider -->
+                <div class="narrative-divider fade-up">
+                    <span class="narrative-divider-dot"></span>
+                    <span class="narrative-divider-dot"></span>
+                    <span class="narrative-divider-dot"></span>
+                </div>
+
+                <!-- Systems graphic in card -->
+                <div class="systems-card fade-up">
+                    <div class="systems-card-label">Your Current Tech Stack</div>
+                    <div class="systems-visual">
+                        <div class="system-node">
+                            <div class="system-node-icon sn-clover">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <span class="system-node-label">Clover POS</span>
+                            <span class="system-node-sub">Transactions</span>
                         </div>
-                        <span class="system-node-label">Clover POS</span>
-                        <span class="system-node-sub">Transactions</span>
-                    </div>
 
-                    <div class="system-arrow">
-                        <div class="system-arrow-line"></div>
-                    </div>
-
-                    <div class="system-node">
-                        <div class="system-node-icon sn-acuity">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <div class="system-arrow">
+                            <div class="system-arrow-line"></div>
                         </div>
-                        <span class="system-node-label">Acuity</span>
-                        <span class="system-node-sub">Appointments</span>
-                    </div>
 
-                    <div class="system-arrow arrow-to-rewards">
-                        <div class="system-arrow-line"></div>
-                    </div>
-
-                    <div class="system-node">
-                        <div class="system-node-icon sn-rewards">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#b794f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        <div class="system-node">
+                            <div class="system-node-icon sn-acuity">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#63b3ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <span class="system-node-label">Acuity</span>
+                            <span class="system-node-sub">Appointments</span>
                         </div>
-                        <span class="system-node-label">Rewards App</span>
-                        <span class="system-node-sub">Loyalty</span>
+
+                        <div class="system-arrow arrow-to-rewards">
+                            <div class="system-arrow-line"></div>
+                        </div>
+
+                        <div class="system-node">
+                            <div class="system-node-icon sn-rewards">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#b794f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                            <span class="system-node-label">Rewards App</span>
+                            <span class="system-node-sub">Loyalty</span>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="narrative-divider fade-up">
+                    <span class="narrative-divider-dot"></span>
+                    <span class="narrative-divider-dot"></span>
+                    <span class="narrative-divider-dot"></span>
                 </div>
 
                 <!-- Bottom message -->
